@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'app/routes.dart';
+import 'core/theme/app_theme.dart';
+
 void main() {
   runApp(const DMJAI());
 }
@@ -12,27 +15,12 @@ class DMJAI extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'DMJ AI',
-      theme: ThemeData.dark(),
-      home: const SplashScreen(),
-    );
-  }
-}
 
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+      theme: AppTheme.darkTheme,
 
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
-          'DMJ AI',
-          style: TextStyle(
-            fontSize: 40,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
+      initialRoute: AppRoutes.splash,
+
+      routes: AppRoutes.routes,
     );
   }
 }
