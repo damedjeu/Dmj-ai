@@ -1,0 +1,16 @@
+name: dmj_ai
+description: DMJ AI - 30 jours de contenu en 5 minutes.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
